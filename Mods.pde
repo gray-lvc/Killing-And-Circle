@@ -55,7 +55,6 @@ class Mods {
       this.col = PURPLE;
     else
       this.col = PINK;
-    println(this.xp);
   }
   
   // Метод для генерации еды с разными характеристиками в рандомном месте
@@ -65,12 +64,11 @@ class Mods {
     ellipse(this.x, this.y, this.size, this.size);                   // Еда
     // Условие выполниться, когда игрок приблизиться к еде
     if (((this.x >= (player.x - this.size)) && (this.x <= (player.x + this.size))) && ((this.y >= (player.y - this.size)) && (this.y <= (player.y + this.size)))) {
-      onceFoods += 1;
+      _recoveryHP(this.xp);                                          // Лечим игрока на определенное количество хп
       foodsCharacteristics();                                        // Получаем рандомные характеристики еды
       fill(BLACK);                                                   // Закрашиваем фрукт в цвет фона
       ellipse(this.x, this.y, this.size, this.size);                 // Создаем этот фрукт
       locationRandom();                                              // Даем новые координаты для еды
-      _recoveryHP(this.xp);                                          // Лечим игрока на определенное количество хп
     }
   }
   
