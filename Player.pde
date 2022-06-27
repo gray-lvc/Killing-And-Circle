@@ -35,7 +35,7 @@ class Player {
     health();
   }
   
-  // Функция для управление персонажем
+  // Метод для управление персонажем
   void management() {
     if (keyPressed) { // Проверяем нажатую кнопку
       if (key == 'w' || key == 'W' || key == 'Ц' || key == 'ц') // Движение вперед
@@ -49,18 +49,19 @@ class Player {
     }
   }
   
-  // Функция проверки здоровья персонажа
+  // Метод проверки здоровья персонажа
   void health () {
     if (this.xp <= 0) {
       gameScene = 2;
     }
   }
   
-  // Функция наносит урон игроку
+  // Метод наносит урон игроку
   void dealDamage (float dd) {
     this.xp -= dd;
   }
   
+  // Метод востанавливает хп игрока
   void recoveryHP (float xpTemp) {
     this.xp += xpTemp;
   }

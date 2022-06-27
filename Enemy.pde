@@ -47,13 +47,14 @@ class Enemy {
       this.y -= speed;
   }
   
-  // Функция, котораяя наносит урон игроку
+  // Метод, котораяя наносит урон игроку
   void damage () {
-    if (((this.x >= (player.x - size / 2)) && (this.x <= (player.x + size / 2))) && ((this.y >= (player.y - size / 2)) && (this.y <= (player.y + size / 2)))) {
+    if (((this.x >= (player.x - this.size / 2)) && (this.x <= (player.x + this.size / 2))) && ((this.y >= (player.y - this.size / 2)) && (this.y <= (player.y + this.size / 2)))) {
         player.dealDamage(this.damage);   // Метод наносит урон игроку;
       }
   }
   
+  // Метод рандомного спавна врага
   void movingEnemy() {
     this.x = random(1000);
     this.x = random(1000);

@@ -2,7 +2,7 @@
 
 class Menu {
 
-  // Отображает количество ХП на экране
+  // Метод отображает количество ХП на экране
   void textXP () {
     textAlign(LEFT);
     textSize(24);
@@ -10,7 +10,7 @@ class Menu {
     text("XP: " + player.xp, 25, 40);
   }
 
-  // Отображает количество урона на экране
+  // Метод отображает количество урона на экране
   void textDamage () {
     textAlign(LEFT);
     textSize(24);
@@ -18,7 +18,7 @@ class Menu {
     text("Damage: " + player.damage, 25, 80);
   }
   
-  // Отображает текст конца игры
+  // Метод отображает текст конца игры
   void textGameOver () {
     textAlign(CENTER);
     textSize(54);
@@ -26,7 +26,7 @@ class Menu {
     text("GAME OVER", width/2, height/2);
   }
   
-   // Отображает текстовый запрос начать игру
+   // Метод отображает текстовый запрос начать игру
   void textStart () {
     textAlign(CENTER);
     textSize(54);
